@@ -26,3 +26,13 @@
 *.exe
 *.out
 *.app
+
+# Build dirs
+build/
+
+# IDE project files
+.project
+.cproject
+.settings/
+
+
