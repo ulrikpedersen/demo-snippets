@@ -17,13 +17,20 @@ INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS})
 
 # For a large number of source files you can create it in a simpler way
 # using file() function:
-file(GLOB cli_SOURCES *.cpp)
+file(GLOB cli_SOURCES cli*.cpp)
 
 # Create an executable file called cli from sources:
-add_executable(cli ${cli_SOURCES})
-target_link_libraries(cli ${Boost_LIBRARIES} )
+#add_executable(cli ${cli_SOURCES})
+#target_link_libraries(cli ${Boost_LIBRARIES} )
 
-INSTALL(TARGETS cli
+include_directories( ${fastcpy_DIR} )
+#file(GLOB fcpy_perf_SOURCES fcpy*.cpp)
+set(fcpy_perf_SOURCES fcpy_perf.cpp timestamp.cpp)
+add_executable(fcpy_perf ${fcpy_perf_SOURCES})
+target_link_libraries(fcpy_perf fastcpy rt )
+
+
+INSTALL(TARGETS fcpy_perf
   RUNTIME DESTINATION bin
   LIBRARY DESTINATION lib
   ARCHIVE DESTINATION lib
