@@ -6,8 +6,8 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY  ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native -mtune=native")
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -march=native -mtune=native")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native -mtune=native -msse2" )
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -march=native -mtune=native -msse2")
 
 # Appends the cmake/modules path inside the MAKE_MODULE_PATH variable which stores the
 # directories of additional CMake modules (ie. MacroOutOfSourceBuild.cmake):

@@ -58,6 +58,7 @@
 
 #define LITTLE_ENDIAN
 #define INDEXED_COPY
+#define MEMCPY_64BIT
 
 
 /********************************************************************
