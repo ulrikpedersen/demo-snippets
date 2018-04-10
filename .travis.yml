@@ -1,7 +1,8 @@
+language: cpp
+
 matrix:
   include:
     - os: linux
-      language: cpp
       compiler: gcc
       addons:
         apt:
@@ -15,7 +16,6 @@ matrix:
         - ./bin/cli
 
     - os: linux
-      language: cpp
       sudo: required
       services:
         - docker
