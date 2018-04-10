@@ -1,0 +1,27 @@
+matrix:
+  include:
+    - os: linux
+      compiler: gcc
+      addons:
+        apt:
+          packages:
+            - libboost-program-options-dev
+      install:
+        - mkdir build && cd build
+        - cmake ..
+        - make
+      script:
+        - build/bin/cli
+
+    - os: linux
+      sudo: required
+      services:
+        - docker
+      install:
+        - docker build -t demo-snippets .
+      script:
+        - docker run --rm -it -v `pwd`:/dst/ demo-snippets cp /root/build/bin/cli /dst/
+        - ls -alh 
+        - file cli
+
+      
