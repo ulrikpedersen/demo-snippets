@@ -25,5 +25,12 @@ matrix:
         - docker run --rm -it -v `pwd`:/dst/ demo-snippets cp /root/build/bin/cli /dst/
         - ls -alh 
         - file cli
+      deploy:
+        provider: releases
+        api_key:
+          secure: "FjF0KwVPpc28aKI7w6rPAqA/k0yBamAYFx/JyFyiWaUg9c105ATMRvNWiquk2Oe1EXYHlOW3Q9Wy/BvrZgVrJ0/WXR1KqBGhW9Nlrcnx12th5IKMWloxxG/d+qpsJyVnmFlzMhdH3fvAkXVrX3WATo9TPiPfUSpJqXVcD9w/0aM="
+        file: "cli"
+        skip_cleanup: true
+        on:
+          tags: true
 
-      
