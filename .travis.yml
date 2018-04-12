@@ -35,3 +35,9 @@ jobs:
         - echo "deploy stage - install"
       script:
         - echo "deploy stage - script"
+      deploy:
+        provider: script
+        script: echo "deploy stage - deploy function only runs on tag"
+        on:
+          tags: true
+          
