@@ -49,6 +49,7 @@ jobs:
         api_key:
           secure: "Szi7eIuQlbBLzuGHgLUTll5cmXTQ7+bq+kAIdMPtDHZg5pcZUAAoxQhiXjYZEuSXarZALiX9JGtAKmZlSbQX1iyjz+aG7Hev/K3CreZxUIHzPyYeoa7m0TPonFVpwL+K9zI1ZeAVqlqDzBmjAZmvqxkimGxoVSVuSXjuGzraaNE="
         file: "cli"
+        body: "This is just a silly test release"
         skip_cleanup: true
         on:
           tags: true
