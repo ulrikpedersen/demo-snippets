@@ -1,29 +1,32 @@
-matrix:
+language: cpp
+sudo: required
+services:
+  - docker
+
+
+jobs:
   include:
     - os: linux
-      language: cpp
       compiler: gcc
       addons:
         apt:
           packages:
             - libboost-program-options-dev
       install:
-        - mkdir build && cd build
-        - cmake ..
-        - make
+        - echo "test stage - cmake build install"
       script:
-        - ./bin/cli
+        - echo "test stage - cmake script"
 
     - os: linux
-      language: cpp
-      sudo: required
-      services:
-        - docker
       install:
-        - docker build -t demo-snippets .
+        - echo "test2 stage - docker build install"
       script:
-        - docker run --rm -it -v `pwd`:/dst/ demo-snippets cp /root/build/bin/cli /dst/
-        - ls -alh 
-        - file cli
-
-      
+        - echo "test2 stage - docker script"
+        - docker image ls -a
+    
+    - stage: deploy
+    - os: linux
+      install: 
+        - echo "deploy stage - install"
+      script:
+        - echo "deploy stage - script"
