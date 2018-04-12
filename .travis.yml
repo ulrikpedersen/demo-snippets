@@ -34,3 +34,11 @@ matrix:
         on:
           tags: true
 
+deploy:
+  provider: script
+  script: ls -alhr .
+  skip_cleanup: true
+  on:
+    tags: true
+
+
