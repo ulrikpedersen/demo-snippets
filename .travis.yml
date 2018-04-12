@@ -1,11 +1,10 @@
-
+language: cpp
 
 jobs:
   include:
     - stage: test
       os: linux
       sudo: false
-      language: cpp
       compiler: gcc
       addons:
         apt:
