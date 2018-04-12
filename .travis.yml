@@ -28,7 +28,7 @@ matrix:
       deploy:
         provider: releases
         api_key:
-          secure: "FjF0KwVPpc28aKI7w6rPAqA/k0yBamAYFx/JyFyiWaUg9c105ATMRvNWiquk2Oe1EXYHlOW3Q9Wy/BvrZgVrJ0/WXR1KqBGhW9Nlrcnx12th5IKMWloxxG/d+qpsJyVnmFlzMhdH3fvAkXVrX3WATo9TPiPfUSpJqXVcD9w/0aM="
+          secure: "Szi7eIuQlbBLzuGHgLUTll5cmXTQ7+bq+kAIdMPtDHZg5pcZUAAoxQhiXjYZEuSXarZALiX9JGtAKmZlSbQX1iyjz+aG7Hev/K3CreZxUIHzPyYeoa7m0TPonFVpwL+K9zI1ZeAVqlqDzBmjAZmvqxkimGxoVSVuSXjuGzraaNE="
         file: "cli"
         skip_cleanup: true
         on:
