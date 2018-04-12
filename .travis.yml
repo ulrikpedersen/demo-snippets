@@ -6,7 +6,7 @@ services:
 
 jobs:
   include:
-    - os: linux
+      os: linux
       compiler: gcc
       addons:
         apt:
@@ -17,7 +17,7 @@ jobs:
       script:
         - echo "test stage - cmake script"
 
-    - os: linux
+      os: linux
       install:
         - echo "test2 stage - docker build install"
       script:
@@ -25,7 +25,7 @@ jobs:
         - docker image ls -a
     
     - stage: deploy
-    - os: linux
+      os: linux
       install: 
         - echo "deploy stage - install"
       script:
