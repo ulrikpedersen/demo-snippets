@@ -1,13 +1,11 @@
-language: cpp
-sudo: required
-services:
-  - docker
 
 
 jobs:
   include:
     - stage: test
       os: linux
+      sudo: false
+      language: cpp
       compiler: gcc
       addons:
         apt:
@@ -20,6 +18,9 @@ jobs:
 
     - stage: test
       os: linux
+      sudo: required
+      services:
+        - docker
       install:
         - echo "test2 stage - docker build install"
       script:
@@ -28,6 +29,9 @@ jobs:
     
     - stage: deploy
       os: linux
+      sudo: required
+      services:
+        - docker
       install: 
         - echo "deploy stage - install"
       script:
