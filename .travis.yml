@@ -18,6 +18,7 @@ jobs:
       script:
         - echo "test stage - cmake script"
 
+    - stage: test
       os: linux
       install:
         - echo "test2 stage - docker build install"
