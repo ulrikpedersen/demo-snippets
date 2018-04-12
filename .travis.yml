@@ -2,6 +2,7 @@ language: cpp
 
 jobs:
   include:
+    # Job no.1
     - stage: test
       os: linux
       compiler: gcc
@@ -17,6 +18,7 @@ jobs:
       script:
         - ./bin/cli
 
+    # Job no.2
     - stage: test
       os: linux
       sudo: required
@@ -29,6 +31,7 @@ jobs:
         - docker image ls -a
         - docker run --rm -it demo-snippets /root/build/bin/cli
 
+    # Job no.3
     - stage: deploy
       os: linux
       sudo: required
